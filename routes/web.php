@@ -17,7 +17,8 @@ Route::post('/store', [App\Http\Controllers\BuilderController::class, 'store'])-
 Route::post('/validate', [App\Http\Controllers\FormController::class, 'store'])->name('validate');
 
 Route::prefix('dynamic-forms')
-    ->name('dynamic-forms.')->group(function () {
+    ->name('dynamic-forms.')
+    ->group(function () {
         // Dummy route so we can use the route() helper to give formiojs the base path for this group
         Route::get('/')->name('index');
         Route::get('form', [App\Http\Controllers\DynamicFormsResourceController::class, 'index']);

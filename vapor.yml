@@ -2,8 +2,8 @@ id: 35358
 name: dynamic-forms
 environments:
     production:
-        memory: 256
-        cli-memory: 128
+        memory: 1024
+        cli-memory: 512
         runtime: 'php-8.1:al2'
         build:
             - 'COMPOSER_MIRROR_PATH_REPOS=1 composer install --no-dev'
